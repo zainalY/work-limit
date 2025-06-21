@@ -4,16 +4,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PWA Notification Demo</title>
-    <link rel="manifest" href="manifest.json" />
+    <title>LimitWork - Reminder</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <script src="onesignal-init.js" async></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <!-- <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "a0c9da22-7697-4332-af58-c5d61c80ba72",
+                safari_web_id: "web.onesignal.auto.48c84a0b-cc60-468f-93c1-13b193c27b88",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script> -->
+
 </head>
 
 <body>
     <div class="container">
-        <h1>PWA Notification</h1>
-        <button id="notifyBtn">Tampilkan Notifikasi</button>
+        <h1>LimitWork</h1>
+        <form id="taskForm">
+            <input type="text" id="label" placeholder="Contoh: Fokus 60 menit" required>
+            <input type="number" id="duration" placeholder="Durasi (menit)" required>
+            <button type="submit">Tambah Task</button>
+        </form>
+
+        <ul id="taskList"></ul>
     </div>
 
     <script src="app.js"></script>

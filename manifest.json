@@ -1,10 +1,10 @@
 {
-    "name": "PWA Notification Demo",
-    "short_name": "NotifyApp",
-    "start_url": "index.html",
+    "name": "LimitWork Reminder",
+    "short_name": "LimitWork",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "theme_color": "#1e88e5",
     "icons": [
         {
             "src": "icon-192.png",
